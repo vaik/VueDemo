@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="prism.css"/>
     <style type="text/css">
         .demo {
-            border: 1px solid #3474ff;
-            background: #bfc9d5;
+            border: 1px solid #d6dde3;
+            background: #ede9ed;
             min-height: 100px;
             width: 600px;
             margin: 10px 0 0 20px;
@@ -24,6 +24,13 @@
         .red {
             color: red;
         }
+
+        .highlighting{
+            color: #ffb02a;
+            background: #e3e7d5;
+            font-family: Verdana;
+            padding: 2px;
+        }
     </style>
 </head>
 <body>
@@ -37,6 +44,7 @@
     <li><a href="#Total">综合</a></li>
     <li><a href="#If">if指令</a></li>
     <li><a href="#VmPropertity">vm实例的属性和方法</a></li>
+    <li><a href="#LifeCycle">vm实例的生命周期</a></li>
 </ul>
 <h2>Demo</h2>
 
@@ -114,9 +122,9 @@
 </br>
 <span><a href="#Dictionary">回目录</a></span>
 
-<!-- if指令 ---开始-->
+<!-- vm实例的属性和方法 ---开始-->
 <a name="VmPropertity"></a>
-<h3 class="title">#if指令</h3>
+<h3 class="title">#vm实例的属性和方法</h3>
 <div class="demo">
     <div id="VmPropertity">
         <ul>
@@ -126,30 +134,67 @@
             <li>组件其实都是被扩展的Vue实例</li>
         </ul>
         <h4>属性与方法</h4>
-            <pre>
-                <code class="language-js">
-                    var data = { a: 1 }
-                    var vm = new Vue({
-                    data: data
-                    })
+        <p>每个Vue的实例都会代理其<span class="highlighting">data</span>对象里所有的属性</p>
+        <pre>
+            <code class="language-javascript">
+var data = { a: 1 }
+var vm = new Vue({
+data: data
+})
 
-                    vm.a === data.a // -> true
+vm.a === data.a // -> true
 
-                    // 设置属性也会影响到原始数据
-                    vm.a = 2
-                    data.a // -> 2
+// 设置属性也会影响到原始数据
+vm.a = 2
+data.a // -> 2
 
-                    // ... 反之亦然
-                    data.a = 3
-                    vm.a // -> 3
-                </code>
-            </pre>
+// ... 反之亦然
+data.a = 3
+vm.a // -> 3
+            </code>
+        </pre>
+        <p>除了数据属性，Vue实例暴露了一些有用的实例属性和方法，这些属性与方法都有前缀$,以便与代理的数据属性区分。</p>
+        <pre>
+            <code class="language-javascript">
+var data = {a:1};
+var vm = new Vue({
+el:'#example',
+data:data
+});
+
+vm.$data === data // -> true
+vm.$el === document.getElementById('example') // -> true
+
+// $watch 是一个实例方法
+vm.$watch('a',function(newVal,oldVal){
+    // 这个回调将在 'vm.a' 改变后调用
+});
+            </code>
+        </pre>
     </div>
 </div>
-<!-- if指令 ---结束-->
+<!-- vm实例的属性和方法 ---结束-->
 </br>
 <span><a href="#Dictionary">回目录</a></span>
 
+<!-- vm实例的生命周期 ---开始-->
+<a name="LifeCycle"></a>
+<h3 class="title">#vm实例的生命周期</h3>
+<div class="demo lifeCycle">
+    <div id="LifeCycle">
+        <p>下图说明了vm实例的生命周期</p>
+        <img src="http://cn.vuejs.org/images/lifecycle.png" style="width:560px">
+        <p>{{createdTime}}</p>
+        <p>{{beforeCompileTime}}</p>
+        <p>{{compiledTime}}</p>
+        <p>{{readyTime}}</p>
+        <p>{{beforeDestroyTime}}</p>
+        <p>{{destroyedTime}}</p>
+    </div>
+</div>
+<!-- vm实例的生命周期 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
 </body>
 <script type="text/javascript" src="prism.js"></script>
 <script type="text/javascript" src="vue.js"></script>
@@ -219,5 +264,54 @@
             greeting: true
         }
     });
+    var number = 0;
+    //#vm实例的生命周期
+    var lifeCycle = new Vue({
+        el:"#LifeCycle",
+        data:{
+            createdTime:"createdTime",
+            beforeCompileTime:"beforeCompileTime",
+            compiledTime:"compiledTime",
+            readyTime:"readyTime",
+            beforeDestroyTime:"beforDestroyTime",
+            destroyedTime:"destoryedTime"
+        },
+        created:function(){
+            number++;
+            this.createdTime = "createdTime: "+GetTime()+" order:"+number;
+        },
+        beforeCompile:function(){
+            number++;
+            this.beforeCompileTime = "beforeCompileTime: "+GetTime()+" order:"+number;
+        },
+        compiled:function(){
+            number++;
+            this.compiledTime = "compiledTime: "+GetTime()+" order:"+number;
+        },
+        ready:function(){
+            number++;
+            this.readyTime = "readyTime: "+GetTime()+" order:"+number;
+        },
+        beforeDestroy:function(){
+            number++;
+            this.beforeDestroyTime = "beforeDestroyTime: "+GetTime()+" order:"+number;
+            alert(this.beforeDestroyTime);
+        },
+        destroyed:function(){
+            number++;
+            this.destroyedTime = "destroyedTime: "+GetTime()+" order:"+number;
+            alert(this.destroyedTime);
+        }
+    });
+    lifeCycle.$destroy(false);
+    //var lifeCycleDemo = document.getElementsByClassName("lifeCycle");
+    //lifeCycle.$mount(lifeCycleDemo);
+
+    function GetTime(){
+        var time = new Date();
+        return time.getFullYear()+"年"+(time.getMonth()+1)+"月"+time.getDate()+"日 "
+        +time.getHours()+":"+time.getMinutes()+":"+time.getSeconds()+" "+time.getMilliseconds()
+        +"毫秒";
+    }
 </script>
 </html>
