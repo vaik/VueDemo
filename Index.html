@@ -32,6 +32,7 @@
         <li><a href="#For">渲染列表</a></li>
         <li><a href="#ReserveMessage">处理用户输入</a></li>
         <li><a href="#Total">综合</a></li>
+        <li><a href="#If">if指令</a></li>
     </ul>
     <h2>Demo</h2>
 
@@ -55,7 +56,7 @@
         <div id="For">
             <ul>
                 <li v-for="item in list">
-                    {{list[item]}}
+                    {{item}}
                 </li>
             </ul>
         </div>
@@ -97,6 +98,17 @@
     </br>
     <span><a href="#Dictionary">回目录</a></span>
 
+    <!-- if指令 ---开始-->
+    <a name="If"></a>
+    <h3 class="title">#if指令</h3>
+    <div class="demo">
+        <div id="If">
+            <span v-if="greeting">Hello!</span>
+        </div>
+    </div>
+    <!-- if指令 ---结束-->
+    </br>
+    <span><a href="#Dictionary">回目录</a></span>
 </body>
 <script type="text/javascript" src="vue.js"></script>
 <script type="text/javascript">
@@ -154,6 +166,14 @@
             RemoveTodo:function(index){
                 this.Todos.splice(index,1);
             }
+        }
+    });
+
+    //#if指令
+    var theIf = new Vue({
+        el:"#If",
+        data:{
+            greeting:true
         }
     });
 </script>
