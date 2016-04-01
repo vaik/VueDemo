@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>我的Vue学习Demo首页</title>
+    <link rel="stylesheet" href="prism.css"/>
     <style type="text/css">
         .demo {
             border: 1px solid #3474ff;
@@ -13,103 +14,144 @@
             padding: 10px 10px 10px 20px;
             line-height: 35px;
         }
+
         .title {
             font-size: 16px;
             font-weight: bold;
             margin-left: 20px;
         }
-        .red{
-            color:red;
+
+        .red {
+            color: red;
         }
     </style>
 </head>
 <body>
-    <a name="Dictionary"></a>
-    <h1>我的Vue学习Demo</h1>
-    <h2>目录</h2>
-    <ul>
-        <li><a href="#FirstDemo"></a></li>
-        <li><a href="#For">渲染列表</a></li>
-        <li><a href="#ReserveMessage">处理用户输入</a></li>
-        <li><a href="#Total">综合</a></li>
-        <li><a href="#If">if指令</a></li>
-    </ul>
-    <h2>Demo</h2>
+<a name="Dictionary"></a>
+<h1>我的Vue学习Demo</h1>
+<h2>目录</h2>
+<ul>
+    <li><a href="#FirstDemo"></a></li>
+    <li><a href="#For">渲染列表</a></li>
+    <li><a href="#ReserveMessage">处理用户输入</a></li>
+    <li><a href="#Total">综合</a></li>
+    <li><a href="#If">if指令</a></li>
+    <li><a href="#VmPropertity">vm实例的属性和方法</a></li>
+</ul>
+<h2>Demo</h2>
 
-    <!-- 第一个Demo：双向绑定 ---开始-->
-    <a name="FirstDemo"></a>
-    <h3 class="title">#第一个Demo：双向绑定></h3>
-    <div class="demo">
-        <div id="FirstDemo">
-            <input v-model="Message" type="text"/></br>
-            <p>{{Message}}</p>
-        </div>
+<!-- 第一个Demo：双向绑定 ---开始-->
+<a name="FirstDemo"></a>
+<h3 class="title">#第一个Demo：双向绑定></h3>
+<div class="demo">
+    <div id="FirstDemo">
+        <input v-model="Message" type="text"/></br>
+        <p>{{Message}}</p>
     </div>
-    <!-- 第一个Demo：双向绑定 ---结束-->
-    </br>
-    <span><a href="#Dictionary">回目录</a></span>
+</div>
+<!-- 第一个Demo：双向绑定 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
 
-    <!-- 渲染列表 ---开始-->
-    <a name="For"></a>
-    <h3 class="title">#渲染列表</h3>
-    <div class="demo">
-        <div id="For">
-            <ul>
-                <li v-for="item in list">
-                    {{item}}
-                </li>
-            </ul>
-        </div>
-        <p class="red">注：这里的list必须是数组对象！</p>
-        <p class="red">另：其中一个指令解析出错，所有指令都不执行！</p>
+<!-- 渲染列表 ---开始-->
+<a name="For"></a>
+<h3 class="title">#渲染列表</h3>
+<div class="demo">
+    <div id="For">
+        <ul>
+            <li v-for="item in list">
+                {{item}}
+            </li>
+        </ul>
     </div>
-    <!-- 渲染列表 ---结束-->
-    </br>
-    <span><a href="#Dictionary">回目录</a></span>
+    <p class="red">注：这里的list必须是数组对象！</p>
+    <p class="red">另：其中一个指令解析出错，所有指令都不执行！</p>
+</div>
+<!-- 渲染列表 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
 
-    <!-- 处理用户输入 ---开始-->
-    <a name="ReserveMessage"></a>
-    <h3 class="title">#处理用户输入</h3>
-    <div class="demo">
-        <div id="ReserveMessage">
-            <p>{{Message}}</p>
-            <button v-on:click="reserveMessage">Reserve Message</button>
-        </div>
+<!-- 处理用户输入 ---开始-->
+<a name="ReserveMessage"></a>
+<h3 class="title">#处理用户输入</h3>
+<div class="demo">
+    <div id="ReserveMessage">
+        <p>{{Message}}</p>
+        <button v-on:click="reserveMessage">Reserve Message</button>
     </div>
-    <!-- 处理用户输入 ---结束-->
-    </br>
-    <span><a href="#Dictionary">回目录</a></span>
+</div>
+<!-- 处理用户输入 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
 
-    <!-- 综合 ---开始-->
-    <a name="Total"></a>
-    <h3 class="title">#综合</h3>
-    <div class="demo">
-        <div id="Total">
-            <input type="text" v-on:keyup.enter="AddTodo" placeholder="Keyup Enter to add item" v-Model="newTodo"/>
-            <ul>
-                <li v-for="todo in Todos">
-                    <span>{{todo.Text}}</span>
-                    <button v-on:click="RemoveTodo($index)">X</button>
-                </li>
-            </ul>
-        </div>
+<!-- 综合 ---开始-->
+<a name="Total"></a>
+<h3 class="title">#综合</h3>
+<div class="demo">
+    <div id="Total">
+        <input type="text" v-on:keyup.enter="AddTodo" placeholder="Keyup Enter to add item" v-Model="newTodo"/>
+        <ul>
+            <li v-for="todo in Todos">
+                <span>{{todo.Text}}</span>
+                <button v-on:click="RemoveTodo($index)">X</button>
+            </li>
+        </ul>
     </div>
-    <!-- 综合 ---结束-->
-    </br>
-    <span><a href="#Dictionary">回目录</a></span>
+</div>
+<!-- 综合 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
 
-    <!-- if指令 ---开始-->
-    <a name="If"></a>
-    <h3 class="title">#if指令</h3>
-    <div class="demo">
-        <div id="If">
-            <span v-if="greeting">Hello!</span>
-        </div>
+<!-- if指令 ---开始-->
+<a name="If"></a>
+<h3 class="title">#if指令</h3>
+<div class="demo">
+    <div id="If">
+        <span v-if="greeting">Hello!</span>
     </div>
-    <!-- if指令 ---结束-->
-    </br>
-    <span><a href="#Dictionary">回目录</a></span>
+</div>
+<!-- if指令 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
+
+<!-- if指令 ---开始-->
+<a name="VmPropertity"></a>
+<h3 class="title">#if指令</h3>
+<div class="demo">
+    <div id="VmPropertity">
+        <ul>
+            <li>一个Vue的实例其实正是一个MVVM模式中的ViewModel-因此后可经常使用vm这个变量名</li>
+            <li>在实例化Vue时,需要传入一个选项对象，它可以包含数据、模板、挂载元素、方法、生命周期钩子等</li>
+            <li>可以扩展Vue构造器，从而用预定义的选项创建可复用的组件构造器</li>
+            <li>组件其实都是被扩展的Vue实例</li>
+        </ul>
+        <h4>属性与方法</h4>
+            <pre>
+                <code class="language-js">
+                    var data = { a: 1 }
+                    var vm = new Vue({
+                    data: data
+                    })
+
+                    vm.a === data.a // -> true
+
+                    // 设置属性也会影响到原始数据
+                    vm.a = 2
+                    data.a // -> 2
+
+                    // ... 反之亦然
+                    data.a = 3
+                    vm.a // -> 3
+                </code>
+            </pre>
+    </div>
+</div>
+<!-- if指令 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
+
 </body>
+<script type="text/javascript" src="prism.js"></script>
 <script type="text/javascript" src="vue.js"></script>
 <script type="text/javascript">
     // #第一个Demo：双向绑定
@@ -122,24 +164,25 @@
 
     //#渲染列表
     var theFor = new Vue({
-        el:"#For",
-        data:{
-            list:[
+        el: "#For",
+        data: {
+            list: [
                 "First",
                 "Second",
                 "Third",
                 "Fourth"
-        ]}
+            ]
+        }
     });
 
     //#处理用户输入
     var reserveMessage = new Vue({
-        el:"#ReserveMessage",
-        data:{
-            Message:"Hello VueJs!"
+        el: "#ReserveMessage",
+        data: {
+            Message: "Hello VueJs!"
         },
-        methods:{
-            reserveMessage:function(){
+        methods: {
+            reserveMessage: function () {
                 this.Message = this.Message.split('').reverse().join('');
             }
         }
@@ -147,33 +190,33 @@
 
     //#综合
     var total = new Vue({
-        el:"#Total",
-        data:{
-            newTodo:"",
-            Todos:[
+        el: "#Total",
+        data: {
+            newTodo: "",
+            Todos: [
                 {
-                    Text:"Add some todo"
+                    Text: "Add some todo"
                 }
             ]
         },
-        methods:{
-            AddTodo:function(){
+        methods: {
+            AddTodo: function () {
                 var text = this.newTodo.trim();
                 this.Todos.push({
-                    Text:text
+                    Text: text
                 });
             },
-            RemoveTodo:function(index){
-                this.Todos.splice(index,1);
+            RemoveTodo: function (index) {
+                this.Todos.splice(index, 1);
             }
         }
     });
 
     //#if指令
     var theIf = new Vue({
-        el:"#If",
-        data:{
-            greeting:true
+        el: "#If",
+        data: {
+            greeting: true
         }
     });
 </script>
