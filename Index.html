@@ -5,6 +5,12 @@
     <title>我的Vue学习Demo首页</title>
     <link rel="stylesheet" href="prism.css"/>
     <style type="text/css">
+        div,p,span{
+            font-size:11px;
+        }
+        li{
+            line-height: 25px;
+        }
         .demo {
             border: 1px solid #d6dde3;
             background: #ede9ed;
@@ -12,7 +18,7 @@
             width: 600px;
             margin: 10px 0 0 20px;
             padding: 10px 10px 10px 20px;
-            line-height: 35px;
+            line-height: 30px;
         }
 
         .title {
@@ -36,6 +42,34 @@
             margin:0;
             padding:0;
         }
+
+       .demo p.tip {
+        padding: 12px 24px 12px 30px;
+        margin: 2em 0;
+        border-left: 4px solid #f66;
+        background-color: #f8f8f8;
+        position: relative;
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 2px;
+    } 
+
+        .demo p.tip:before {
+        position: absolute;
+        top: 14px;
+        left: -12px;
+        background-color: #f66;
+        color: #fff;
+        content: "!";
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+        font-weight: bold;
+        font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14px;
+    }
+
     </style>
 </head>
 <body>
@@ -518,6 +552,158 @@ computed: {
 <!-- 计算属性 ---结束-->
 </br>
 <span><a href="#Dictionary">回目录</a></span>
+
+
+<!-- Class与 Style绑定 ---开始-->
+<a name="ClassStyle"></a>
+<h3 class="title">#Class与 Style绑定</h3>
+<div class="demo">
+    <div id="ClassStyle">
+        <p>数据绑定一个常见需求是操作元素的 class 列表和它的内联样式。因为它们都是属性，我们可以用 v-bind 处理它们：我们只需要计算出表达式最终的字符串。不过，字符串拼接麻烦又易错。因此，在v-bind 用于 class 和 style 时，Vue.js 专门增强了它。表达式的结果类型除了字符串之外，还可以是对象或数组。</p>
+        <h4>绑定 HTML Class</h4>
+        <p class="tip">
+            尽管可以用 Mustache 标签绑定 class，比如 class="{{ className }}"，但是我们不推荐这种写法和 v-bind:class 混用。两者只能选其一！
+        </p>
+        <h5>#对象语法</h5>
+        <p>我们可以传给 <span class="highlighting">v-bind:class</span> 一个对象，以动态地切换 class。注意 <span class="highlighting">v-bind:class</span> 指令可以与普通的 <span class="highlighting">class</span> 特性共存：</p>
+        <pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div class="static" v-bind:class="{ 'class-a': isA, 'class-b': isB }"></div>
+            </script>
+            </code>
+        </pre>
+        <pre>
+            <code class="language-javascript">
+data: {
+  isA: true,
+  isB: false
+}
+            </code>
+        </pre>
+        <p>渲染为：</p>
+        <pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div class="static class-a"></div>
+            </script>
+            </code>
+        </pre>
+        <p>当 isA 和 isB 变化时，class 列表将相应地更新。例如，如果 isB 变为 true，class 列表将变为 "static class-a class-b"。</p>
+        <p>也可以直接绑定数据里的一个对象</p>
+        <pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div v-bind:class="classObject"></div>
+            </script>
+            </code>
+        </pre>
+         <pre>
+            <code class="language-javascript">
+data: {
+  classObject: {
+    'class-a': true,
+    'class-b': false
+  }
+}
+            </code>
+        </pre>
+        <p>我们也可以在这里绑定一个返回对象的计算属性。这是一个常用且强大的模式。</p>
+        <h5>#数组语法</h5>
+        <p>也可以把一个数组传给<span class="highlighting">v-bind:class</span>,以应用一个class列表</p>
+        <pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div v-bind:class="[classA,classB]"></div>
+            </script>
+            </code>
+        </pre>
+         <pre>
+            <code class="language-javascript">
+data: {
+    classA:'class-a',
+    classB:'class-b'
+}
+            </code>
+        </pre>
+        <p>渲染为：</p>
+        <pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div class="class-a class-b"></div>
+            </script>
+            </code>
+        </pre>
+        <p>如果你也想根据条件切换列表中的class,可以用三元表达式</p>
+<pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div v-bind:class="[classA, isB ? classB : '']">
+            </script>
+            </code>
+        </pre>
+        <p>此例始终添加 <span class="highlighting">classA</span>，但是只有在 <span class="highlighting">isB</span> 是 <span class="highlighting">true</span> 时添加 <span class="highlighting">classB</span> 。</p>
+        <p>不过，当有多个条件 class 时这样写有些繁琐。在 1.0.19+ 中，可以在数组语法中使用对象语法：</p>
+        <pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div v-bind:class="[classA, { classB: isB, classC: isC }]">
+            </script>
+            </code>
+        </pre>
+        <h4>绑定内联样式</h4>
+        <h5>对象语法</h5>
+        <p><span class="highlighting">v-bind:style </span>的对象语法十分直观——看着非常像 CSS，其实它是一个 JavaScript 对象。CSS 属性名可以用驼峰式（camelCase）或短横分隔命名（kebab-case）：</p>
+        <pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+            </script>
+            </code>
+        </pre>
+        <pre>
+            <code class="language-javascript">
+data: {
+  activeColor: 'red',
+  fontSize: 30
+}
+            </code>
+        </pre>
+        <p>直接绑定到一个样式对象通常更好，让模板更清晰：</p>
+                <pre>
+            <code class="language-markup">
+            <script type="prism-html-markup">
+<div v-bind:style="styleObject"></div>
+            </script>
+            </code>
+        </pre>
+        <pre>
+            <code class="language-javascript">
+data: {
+  styleObject: {
+    color: 'red',
+    fontSize: '13px'
+  }
+}
+            </code>
+        </pre>
+        <h5>#数组语法</h5>
+        <p><span class="highlighting">v-bind:style</span>的数组语法可以将多个样式对象应用到一个元素上</p>
+        <pre>
+            <code class="language-markup">
+                    <script type="prism-html-markup">
+<div v-bind:style="[styleObjectA,styleObjectB]">
+                    </script>
+            </code>
+        </pre>
+        <h5>#自动添加前缀</h5>
+         <p>当<span class="highlighting">v-bind:style</span>使用需要厂商前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。</p>
+    </div>
+</div>
+<!-- Class与 Style绑定 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
+
 
 </body>
 <script type="text/javascript" src="prism.js"></script>
