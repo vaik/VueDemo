@@ -31,6 +31,11 @@
             font-family: Verdana;
             padding: 2px;
         }
+
+        pre code {
+            margin:0;
+            padding:0;
+        }
     </style>
 </head>
 <body>
@@ -38,7 +43,7 @@
 <h1>我的Vue学习Demo</h1>
 <h2>目录</h2>
 <ul>
-    <li><a href="#FirstDemo"></a></li>
+    <li><a href="#FirstDemo">Hello World!</a></li>
     <li><a href="#For">渲染列表</a></li>
     <li><a href="#ReserveMessage">处理用户输入</a></li>
     <li><a href="#Total">综合</a></li>
@@ -46,12 +51,15 @@
     <li><a href="#VmPropertity">vm实例的属性和方法</a></li>
     <li><a href="#LifeCycle">vm实例的生命周期</a></li>
     <li><a href="#DataBind">数据绑定</a></li>
+    <li><a href="#DataFilter">过滤器、指令、缩写</a></li>
+    <li><a href="#Computed">计算属性</a></li>
+    <li><a href="#ClassStyle">Class与Style绑定</a></li>
 </ul>
 <h2>Demo</h2>
 
 <!-- 第一个Demo：双向绑定 ---开始-->
 <a name="FirstDemo"></a>
-<h3 class="title">#第一个Demo：双向绑定></h3>
+<h3 class="title">#第一个Demo：双向绑定</h3>
 <div class="demo">
     <div id="FirstDemo">
         <input v-model="Message" type="text"/></br>
@@ -200,7 +208,7 @@ vm.$watch('a',function(newVal,oldVal){
 <!-- 数据绑定 ---开始-->
 <a name="DataBind"></a>
 <h3 class="title">#数据绑定</h3>
-<div class="demo lifeCycle">
+<div class="demo">
     <div id="DataBind">
         <h4>文本</h4>
         <p>数据绑定最基础的形式是文本插值，使用“Mustache”语法（双大括号）</p>
@@ -221,6 +229,7 @@ vm.$watch('a',function(newVal,oldVal){
                 </script>
             </code>
         </pre>
+        <button v-on:click="changeMsg">Change Msg</button>
         <p>JavaScript Code</p>
         <pre>
             <code class="language-javascript">
@@ -238,10 +247,275 @@ var dataBind = new Vue({
             </code>
         </pre>
         </br>
-        <button v-on="changeMsg">Change Msg</button>
+        <h4>原始的HTML</h4>
+        <p>使用三Mustache标签</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<div>{{{raw_html}}}</div>
+                </script>
+            </code>
+        </pre>
+        <h4>HTML特性</h4>
+        <p>Mustache Mustache 标签也可以用在 HTML 特性 (Attributes) 内：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<div id="item-{{ id }}"></div>
+                </script>
+            </code>
+        </pre>
+        <h4>JavaScript 表达式</h4>
+        <p> Vue.js 在数据绑定内支持全功能的 JavaScript 表达式：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+{{ number + 1 }}
+
+{{ ok ? 'YES' : 'NO' }}
+
+{{ message.split('').reverse().join('') }}
+                </script>
+            </code>
+        </pre>
+        <p>一个限制是每个绑定只能包含单个表达式，因此下面的语句是无效的：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<!-- 这是一个语句，不是一个表达式： -->
+{{ var a = 1 }}
+
+<!-- 流程控制也不可以，可改用三元表达式 -->
+{{ if (ok) { return message } }}
+                </script>
+            </code>
+        </pre>
     </div>
 </div>
 <!-- 数据绑定 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
+
+<!-- 数据过滤 ---开始-->
+<a name="DataFilter"></a>
+<h3 class="title">#过滤器、指令、缩写</h3>
+<div class="demo">
+    <div id="DataFilter">
+    <h4>过滤器</h4>
+       <p>Vue.js 允许在表达式后添加可选的“过滤器”，以管道符指示：</p>
+       <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+{{ message | capitalize }}
+                </script>
+            </code>
+        </pre>
+        <p>过滤器可以串联：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+{{ message | filterA | filterB }}
+                </script>
+            </code>
+        </pre>
+        <p>过滤器也可以接受参数：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+{{ message | filterA 'arg1' arg2 }}
+                </script>
+            </code>
+        </pre>
+        <p>过滤器函数始终以表达式的值作为第一个参数。带引号的参数视为字符串，而不带引号的参数按表达式计算。这里，字符串 'arg1' 将传给过滤器作为第二个参数，表达式 arg2 的值在计算出来之后作为第三个参数。</p>
+        <h4>指令</h4>
+        <p>指令（Directives)是特殊的带有前缀<span class='highlighting'>v-</span>的物性,指令的值限定为绑定表达式，因此上面提到的Javascript表达式及过滤器规则 在这里也适用。指令的职责就是当其表达式的值改变时把某些特殊的行为应用到DOM上。</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<p v-if="greeting">Hello!</p>
+                </script>
+            </code>
+        </pre>
+        这里 <span class="highlighting">v-if</span> 指令将根据表达式 <span class="highlighting">greeting</span>  值的真假删除/插入 <span class="highlighting">&lt;p&gt;</span> </span>元素。
+        <h5>#参数</h5>
+        <p>有些指令可以在其名称后面带一个"参数"(Argument),中间放一个冒号隔开。例如,<span class="highlighting">v-bind</span>指令用于响应地更新HTML特性：</p>
+        <pre>
+            <code class="language-markup">
+                <script type = "prism-html-markup">
+<a v-bind:href = "url"></a>
+                </script>
+            </code>
+        </pre>
+        <h5>#修饰符</h5>
+        <p>修饰符（Modifiers）是以半角句号<span class="highlighting">.</span>开始的特殊后缀，用于表示指令应当以特殊方式绑定。例如<span class="highlighting">.literal</span>修饰符告诉指令将它的值解析为一个字面字符串而不是一个表达式：</p>
+        <pre>
+            <code class="language-markup">
+                <script type = "prism-html-markup">
+<a v-bind:href.literal="/a/b/c"></a>
+                </script>
+            </code>
+        </pre>
+        <h5>缩写</h5>
+        <h4>#<span class="highlighting">v-bind</span> 缩写</h4>
+        <pre>
+            <code class="language-markup">
+                <script type = "prism-html-markup">
+<!-- 完整语法 -->
+<a v-bind:href="url"></a>
+
+<!-- 缩写 -->
+<a :href="url"></a>
+
+<!-- 完整语法 -->
+<button v-bind:disabled="someDynamicCondition">Button</button>
+
+<!-- 缩写 -->
+<button :disabled="someDynamicCondition">Button</button>
+                </script>
+            </code>
+        </pre>
+        <h5><span class="highlighting">#v-on</span> 缩写</h5>
+<pre>
+            <code class="language-markup">
+                <script type = "prism-html-markup">
+<!-- 完整语法 -->
+<a v-on:click="doSomething"></a>
+
+<!-- 缩写 -->
+<a @click="doSomething"></a>
+                </script>
+            </code>
+        </pre>
+    </div>
+</div>
+<!-- 数据过滤 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
+
+
+<!-- 计算属性 ---开始-->
+<a name="Computed"></a>
+<h3 class="title">#计算属性</h3>
+<div class="demo">
+    <div id="Computed">
+       a={{ a }}, b={{ b }}
+       <h4>#基础例子</h4>
+       <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<div id="example">
+  a={{ a }}, b={{ b }}
+</div>
+                </script>
+            </code>
+       </pre>
+       <pre>
+            <code class="language-javascript">
+var computed = new Vue({
+        el:"#Computed",
+        data:{
+            a:1
+        },
+        computed:{
+            // 一个计算属性的 getter
+            b:function(){
+                // 'this'指向vm实例
+                return this.a+1;
+            }
+        }
+    });
+            </code>
+       </pre>
+       <p>结果：</p>
+       <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+  a=1, b=2
+                </script>
+            </code>
+       </pre>
+       <pre>
+            <code class="language-javascript">
+console.log(vm.b) // -> 2
+vm.a = 2
+console.log(vm.b) // -> 3
+            </code>
+       </pre>
+       <h4>#计算属性vs.$watch</h4>
+       <p>Vue.js 提供了一个方法 $watch，它用于观察 Vue 实例上的数据变动。当一些数据需要根据其它数据变化时， $watch 很诱人 —— 特别是如果你来自 AngularJS。不过，通常更好的办法是使用计算属性而不是一个命令式的 $watch 回调。考虑下面例子：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<div id="demo">{{fullName}}</div>
+                </script>
+            </code>
+       </pre>
+       <pre>
+            <code class="language-javascript">
+var vm = new Vue({
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar',
+    fullName: 'Foo Bar'
+  }
+})
+
+vm.$watch('firstName', function (val) {
+  this.fullName = val + ' ' + this.lastName
+})
+
+vm.$watch('lastName', function (val) {
+  this.fullName = this.firstName + ' ' + val
+})
+            </code>
+       </pre>
+       <p>上面代码是命令式的重复的。跟计算属性对比</p>
+        <pre>
+            <code class="language-javascript">
+var vm = new Vue({
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar'
+  },
+  computed: {
+    fullName: function () {
+      return this.firstName + ' ' + this.lastName
+    }
+  }
+})
+            </code>
+       </pre>
+
+       <h5>#计算setter</h5>
+      <div> 
+      firstName: {{firstName}}</br>
+       lastName: {{lastName}}</br>
+       fullName: {{fullName}}</br>
+        </div>
+        <p>计算属性默认只是 getter，不过在需要时你也可以提供一个 setter：</p>
+                <pre>
+            <code class="language-javascript">
+// ...
+computed: {
+  fullName: {
+    // getter
+    get: function () {
+      return this.firstName + ' ' + this.lastName
+    },
+    // setter
+    set: function (newValue) {
+      var names = newValue.split(' ')
+      this.firstName = names[0]
+      this.lastName = names[names.length - 1]
+    }
+  }
+}
+// ...
+            </code>
+       </pre>
+    </div>
+</div>
+<!-- 计算属性 ---结束-->
 </br>
 <span><a href="#Dictionary">回目录</a></span>
 
@@ -377,6 +651,41 @@ var dataBind = new Vue({
         }
     });
 
+    // 计算属性基础例子
+    var computed = new Vue({
+        el:"#Computed",
+        data:{
+            a:1,
+            firstName: 'Foo',
+            lastName: 'Bar',
+            fullName: 'Foo Bar'
+        },
+        computed:{
+            // 一个计算属性的 getter
+            b:function(){
+                // 'this'指向vm实例
+                return this.a+1;
+            },
+            fullName:{
+                get:function(){
+                    return this.firstName + " "+ this.lastName;
+                },
+                set:function(val){
+                    var names = val.split(" ");
+                    this.firstName = names[0];
+                    this.lastName = names[1];
+                }
+            }
+        }
+    });
+//    computed.$watch('firstName', function (val) {
+//      this.fullName = val + ' ' + this.lastName
+//    });
+
+ //   computed.$watch('lastName', function (val) {
+//    this.fullName = this.firstName + ' ' + val
+//  })
+    
 
 </script>
 </html>
