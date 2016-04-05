@@ -1,0 +1,714 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"foreach()	Array"
+			],
+			[
+				"Logi",
+				"LoginState"
+			],
+			[
+				"tos",
+				"toString()"
+			],
+			[
+				"inpu",
+				"inputEl"
+			],
+			[
+				"la",
+				"layout"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ch",
+				"change	.change()"
+			],
+			[
+				"isE",
+				"isEmpty"
+			],
+			[
+				"li",
+				"listeners"
+			],
+			[
+				"ex",
+				"execCommand()	IE Document"
+			],
+			[
+				"hid",
+				"hide	.hide()"
+			],
+			[
+				"in",
+				"indexOf()	Array"
+			],
+			[
+				"ind",
+				"indexOf()	Array"
+			],
+			[
+				"set",
+				"setHours()"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"sendSt",
+				"sendStatus	Default"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"Busines",
+				"BusinessId"
+			],
+			[
+				"parseI",
+				"parseInt"
+			],
+			[
+				"unc",
+				"uncheckedVal"
+			],
+			[
+				"inp",
+				"inputValue"
+			],
+			[
+				"Active",
+				"ActivePanelName"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"spl",
+				"splice()	Array"
+			],
+			[
+				"comb",
+				"combobox"
+			],
+			[
+				"OptionI",
+				"OpenOperationId"
+			],
+			[
+				"qrc",
+				"qrcodeImgae"
+			],
+			[
+				"ha",
+				"handler"
+			],
+			[
+				"hb",
+				"hbox"
+			],
+			[
+				"组织",
+				"组织机构"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"OrgT",
+				"OrgType"
+			],
+			[
+				"IsS",
+				"IsSingleShop"
+			],
+			[
+				"typ",
+				"typeof"
+			],
+			[
+				"und",
+				"undefined"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"Res",
+				"ResourceManager"
+			],
+			[
+				"编辑",
+				"编辑自动回复"
+			],
+			[
+				"Repl",
+				"ReplayType"
+			],
+			[
+				"getV",
+				"getValue"
+			],
+			[
+				"ude",
+				"undefined"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimel",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"soda",
+				"SublimeCodeIntel: Disable Live Autocompletion"
+			],
+			[
+				"tmpl",
+				"Tmpl: Create javascript"
+			],
+			[
+				"Snippet: ",
+				"Snippet: add"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 514.0
+	},
+	"console":
+	{
+		"height": 155.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/Demo/JavaScriptDemo/VueDemo"
+	],
+	"file_history":
+	[
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.8/ROM/PDW.SCM.Web/Resource/Scripts/Page/PFE.Util.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/SupplierAgrt.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/DishBom.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/Dish.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/DishDepartment.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/BuyOrderBill.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/TransferWBill.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/StockBillInfoRpt.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/BuyInBill.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/WarehouseInfo.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/StockInfoRpt.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/MeberRptBase.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/PanelGrid.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/PanelBase.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/BillsBase.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/CaseBase.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/ComboGrid.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/EnumExternd.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/Department.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/MemberManagement/CardType.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXDish.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXCardTypeSetting.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/ParamSetting.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/StockManagement/MaterialDetailInfo.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Views/Shared/_APIUrl.cshtml",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/PFE.Util.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/MemberManagement/CheckoutRpt.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXMenuSetting.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/AwardCase.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/MemberCaseBase.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/formcommon.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/OperatorCommissionRpt.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/CheckDetailInfo.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/BackDishDetailRpt.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/Award.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/CheckRpt.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/FoodBackAnalyse.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/MarketAnalyse.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/BusinessAnalyse.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/BusinessTimespan.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/MemberCasePanel.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/ComboGridRemote.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/DiningTableType.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessManagement/PanelGridExtend.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/MemberManagement/MemberInfo.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/DiningTable.js",
+		"/F/PaiDui/CRM/branches/5.7(67172)/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/ColorField.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/CardCommon.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/MemberManagement/CardOperationNew.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/WindowBase.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/Dish.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/BusinessTimespan.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Views/Shared/_Layout.cshtml",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/PanelBase.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/PanelGrid.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/CaseBase.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/MeberRptBase.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/MoneyMethodAnalyse.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/validatorCustom.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/payment.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Views/Shared/_APIUrl.cshtml",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/WindowForm.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/AwardCase.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/TicketManagement/TicketInfo.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/TicketManagement/TicketGrant.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/RightsManagement/RoleMange.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/SystemManagement/TerminalManage.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/EnumExternd.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WxFansGroup.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXFansBatchSend.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/MemberManagement/ConversionCaseWindow.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/SystemManagement/SysConfig.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/MemberCaseBase.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/ModuleTemplate/WindowBaseNew.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessManagement/SpecialCaseWindow.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/formcommon.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/DiningTable.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/ButtonExtend.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/ItemSelecter.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/ParamSetting.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/PFE.Util.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/PFE.Util.min.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/TicketManagement/TicketType.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/MemberManagement/MemCouponCaseWindow.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessManagement/DiscountCaseWindow.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/SystemManagement/SysLog.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessManagement/DishPriceRpt.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/ComboGrid.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/RecycleControl.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/ComboGridRemote.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/DishSoldTopRpt.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/main.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/TicketAnalysis/TicketSalesRpt.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXDish.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/grid.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/HomePage/SettingGuide.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/TicketManagement/TicketPlain.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/PdwWidget.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Core/ExtJs/ext-lang-zh_CN.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Core/ExtJs/ux/ajax/DataSimlet.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/DishProfitRpt.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/FilterControl.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/CheckDetailInfo.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/DishDepartment.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Views/Home/Index.cshtml",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/Tables.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/FilterConfig.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/Common/HiddenColsConfig.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessManagement/SellCaseWindow.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BusinessAnalysis/BusinessAnalyse.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Core/ExtJs/ux/grid/FiltersFeature.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Core/ExtJs/ux/form/ItemSelector.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/PFE.Util.js.r61006",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXMenuSetting.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Views/Print/Print.cshtml",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Core/ExtJs/ux/grid/filter/StringFilter.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXManager.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Core/ExtJs/ux/form/MultiSelect.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/RightsManagement/RightsManager.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/MemberBase.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXRefundAudit.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/BasicData/DiningTableType.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXPicTxtMsg.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/MessageSetting.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/SystemManagement/PosConfig.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Core/ExtJs/ux/FieldReplicator.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/WechatManager/WXShopSetting.js",
+		"/F/PaiDui/CRM/trunk/06-程序源码/01-源码/5.4/ROM/PDW.SCM.Web/Resource/Scripts/Page/TicketManagement/TicketFormat.js"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 134.0,
+		"where_history":
+		[
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.8\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page",
+			"F:\\PaiDui\\CRM\\branches\\5.7(67172)\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,,-grid.js,-form.js,-PFE.Login.js,-PFE.Login.min.js,-PFE.Util.js,-kindeditor-min.js,-highcharts.js,-jquery.min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,-EnumExternd.js,-grid.js,-form.js,-PFE.Login.js,-PFE.Login.min.js,-PFE.Util.js,-kindeditor-min.js,-highcharts.js,-jquery.min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,-EnumExternd.js,-grid.js,-form.js,-PFE.Login.js,-PFE.Login.min.js,-PFE.Util.js,-kindeditor-min.js,-highcharts.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,-EnumExternd.js,-grid.js,-form.js,-PFE.Login.js,-PFE.Login.min.js,-PFE.Util.js,-kindeditor-min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,-EnumExternd.js,-grid.js,-form.js,-PFE.Login.js,-PFE.Login.min.js,-PFE.Util.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,-EnumExternd.js,-grid.js,-form.js,-PFE.Login.js,-PFE.Login.min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,-EnumExternd.js,-grid.js,-form.js,-PFE.Login.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,-EnumExternd.js,-grid.js,-form.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js,-EnumExternd.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js,-vswd-ext_2.0.2.js,-PFE.Util.min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js,-ext-all.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js,-ext-all-dev.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js,-ext-all-debug.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts,-ext-all-debug-w-comments.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page,-PFE.Util.js,-PFE.Util.min.js,-form.js,-PFE.Login.min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page,-PFE.Util.js,-PFE.Util.min.js,-form.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page,-PFE.Util.js,-PFE.Util.min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page,-PFE.Util.js, -PFE.Util.min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page,-PFE.Util.js, PFE.Util.min.js",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page,-PFE.Util.js, ",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page,-PFE.Util.js ",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.4\\ROM\\PDW.SCM.Web\\Resource\\Scripts",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.3\\ROM\\PDW.SCM.Web\\Resource\\Scripts",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.3\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.3\\ROM\\PDW.SCM.Web\\Resource\\Scripts",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.3\\ROM\\PDW.SCM.Web\\Resource\\Scripts\\Page",
+			"F:\\PaiDui\\CRM\\trunk\\06-程序源码\\01-源码\\5.3\\ROM\\PDW.SCM.Web\\Resource\\Scripts",
+			"F:\\PaiDui\\CHM\\branches\\ROM\\chm1.3.2.9389.pj\\PDW.SCM.Web\\Resource"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"PostExportExcel",
+			"QueryFormData()",
+			"me.LoadData",
+			"RewardRule",
+			"IsAllOrg",
+			"IsAllOrgtype",
+			"radiogroup",
+			"IsUsePdwAccount",
+			"InitThirdPayGrid",
+			"开通功能",
+			"UpdateMerchantInfo",
+			"GetMerchantInfo",
+			".call",
+			"Formcomm.call",
+			"IsUsePdwAccount",
+			"checkbox",
+			"InitThirdPayGrid",
+			"开通功能",
+			"WxRefundAudit",
+			"盘点单",
+			"入库机构",
+			"CreateTransferWBillForm",
+			"移仓单",
+			"urlParams",
+			"入库仓库",
+			"SetControlDisable",
+			"查看",
+			"ModiFun",
+			"3",
+			"ModiFunc",
+			"ModiFun",
+			"ColumnClickFunc",
+			"material_name",
+			"SCMBillTypeCombo",
+			"库存单据查询",
+			"SaveWXSetting",
+			"LoadData",
+			"UpdateCardTypeOnlineExtend",
+			"Description",
+			"卡样式",
+			"卡类型设置",
+			"规则",
+			"CardTypeManager",
+			"LoadData",
+			"时间",
+			"时间段",
+			"departmentCom",
+			"DishDepartmentForm",
+			"DishDepartment",
+			"ExportUrl",
+			"Export\nExportUrl",
+			"ExportUrl",
+			"Export",
+			"会员结账查询",
+			"CreateTime",
+			"CreateTime(",
+			"CreateTime",
+			"动作",
+			"时段",
+			"时",
+			"有效时",
+			"有效",
+			"TerminalManager",
+			"refGridData",
+			"gridUrl",
+			"callServer",
+			"gridUrl",
+			"LoadData",
+			"CheckDetailInfo",
+			"SerialNumber",
+			"交易流水号",
+			"LoadData",
+			"赠菜",
+			"赠菜分析",
+			"退菜分析",
+			"topToolbar",
+			"topToolbarA",
+			"HadRefreshed",
+			"CreateGridColumnsAndStore",
+			"CreateSummaryGrid",
+			"CreatePanel",
+			"CreateAfter",
+			"panelRefresh",
+			"查询",
+			"ReloadGrid",
+			":  ReloadGrid",
+			":ReloadGrid",
+			": ReloadGrid",
+			"function: ReloadGrid",
+			"function:ReloadGrid",
+			"function: ReloadGrid",
+			"functon : ReloadGrid",
+			"functon: ReloadGrid",
+			"ReloadGrid",
+			"createWeiduSelect",
+			"维度",
+			"查询",
+			"维度",
+			"销售分析",
+			"alert",
+			"GridDetailPanel",
+			"CreateDetailGrid",
+			"CreateExtendSummaryGrid",
+			"Detail",
+			"GridDetail",
+			"GridDetailPanel",
+			"GridColumns",
+			"操作员业绩查询",
+			"QueryFormData",
+			"出品部",
+			"OtherItem",
+			"ExportUrl",
+			"LoadData",
+			"me",
+			"FormCommon",
+			"LoadData:",
+			"checkError",
+			"LoadData",
+			"CardO",
+			"CarOp",
+			"CarOp#",
+			"CarOp",
+			"CheckValid",
+			"SaveWindow",
+			"保存",
+			"确定",
+			"ReadCardNoPwdUrl",
+			"LoadData"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"qrcodeImage",
+			"ReplyType"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "VueDemo.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ticketsalesrpt",
+				"PDW.SCM.Web\\Resource\\Scripts\\Page\\TicketAnalysis\\TicketSalesRpt.js"
+			],
+			[
+				"tickett",
+				"PDW.SCM.Web\\Resource\\Scripts\\Page\\TicketManagement\\TicketType.js"
+			],
+			[
+				"windwo",
+				"PDW.SCM.Web\\Resource\\Scripts\\Page\\ModuleTemplate\\WindowBase.js"
+			],
+			[
+				"window",
+				"PDW.SCM.Web\\Resource\\Scripts\\Page\\ModuleTemplate\\WindowForm.js"
+			],
+			[
+				"pane",
+				"PDW.SCM.Web\\Resource\\Scripts\\Page\\ModuleTemplate\\PanelGrid.js"
+			],
+			[
+				"ticketty",
+				"Resource\\Scripts\\Page\\TicketManagement\\TicketType.js"
+			],
+			[
+				"pdww",
+				"Resource\\Scripts\\Page\\Common\\PdwWidget.js"
+			],
+			[
+				"scorecasew",
+				"Resource\\Scripts\\Page\\MemberManagement\\ScoreCaseWindow.js"
+			],
+			[
+				"memcou",
+				"Resource\\Scripts\\Page\\MemberManagement\\MemCouponCaseWindow.js"
+			],
+			[
+				"conversioncasewindow",
+				"Resource\\Scripts\\Page\\MemberManagement\\ConversionCaseWindow.js"
+			],
+			[
+				"sepicalcasewindow",
+				"Resource\\Scripts\\Page\\BusinessManagement\\SpecialCaseWindow.js"
+			],
+			[
+				"sell",
+				"Resource\\Scripts\\Page\\BusinessManagement\\SellCaseWindow.js"
+			],
+			[
+				"discou",
+				"Resource\\Scripts\\Page\\BusinessManagement\\DiscountCaseWindow.js"
+			],
+			[
+				"dish",
+				"Resource\\Scripts\\Page\\BasicData\\Dish.js"
+			],
+			[
+				"combo",
+				"Resource\\Scripts\\Page\\Common\\ComboGrid.js"
+			],
+			[
+				"pdw",
+				"Scripts\\Page\\Common\\PdwWidget.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 304.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

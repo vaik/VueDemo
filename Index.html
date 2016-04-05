@@ -45,6 +45,7 @@
     <li><a href="#If">if指令</a></li>
     <li><a href="#VmPropertity">vm实例的属性和方法</a></li>
     <li><a href="#LifeCycle">vm实例的生命周期</a></li>
+    <li><a href="#DataBind">数据绑定</a></li>
 </ul>
 <h2>Demo</h2>
 
@@ -195,6 +196,55 @@ vm.$watch('a',function(newVal,oldVal){
 <!-- vm实例的生命周期 ---结束-->
 </br>
 <span><a href="#Dictionary">回目录</a></span>
+
+<!-- 数据绑定 ---开始-->
+<a name="DataBind"></a>
+<h3 class="title">#数据绑定</h3>
+<div class="demo lifeCycle">
+    <div id="DataBind">
+        <h4>文本</h4>
+        <p>数据绑定最基础的形式是文本插值，使用“Mustache”语法（双大括号）</p>
+        <span>Message: {{ msg }}</span>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<span>Message: {{ msg }}</span>
+                </script>
+            </code>
+        </pre>
+        <p>单次插值</p>
+        <span>This will never change: {{* msg }}</span>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<span>This will never change: {{* msg }}</span>
+                </script>
+            </code>
+        </pre>
+        <p>JavaScript Code</p>
+        <pre>
+            <code class="language-javascript">
+var dataBind = new Vue({
+        el:"#DataBind",
+        data:{
+            msg:"This is the message"
+        },
+        methods:{
+            changeMsg:function(){
+                this.msg = "The message is changed!";
+            }
+        }
+    });
+            </code>
+        </pre>
+        </br>
+        <button v-on="changeMsg">Change Msg</button>
+    </div>
+</div>
+<!-- 数据绑定 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
+
 </body>
 <script type="text/javascript" src="prism.js"></script>
 <script type="text/javascript" src="vue.js"></script>
@@ -265,6 +315,7 @@ vm.$watch('a',function(newVal,oldVal){
         }
     });
     var number = 0;
+
     //#vm实例的生命周期
     var lifeCycle = new Vue({
         el:"#LifeCycle",
@@ -295,23 +346,37 @@ vm.$watch('a',function(newVal,oldVal){
         beforeDestroy:function(){
             number++;
             this.beforeDestroyTime = "beforeDestroyTime: "+GetTime()+" order:"+number;
-            alert(this.beforeDestroyTime);
+            //alert(this.beforeDestroyTime);
         },
         destroyed:function(){
             number++;
             this.destroyedTime = "destroyedTime: "+GetTime()+" order:"+number;
-            alert(this.destroyedTime);
+            //alert(this.destroyedTime);
         }
     });
-    lifeCycle.$destroy(false);
+    //lifeCycle.$destroy(false);
     //var lifeCycleDemo = document.getElementsByClassName("lifeCycle");
     //lifeCycle.$mount(lifeCycleDemo);
-
     function GetTime(){
         var time = new Date();
         return time.getFullYear()+"年"+(time.getMonth()+1)+"月"+time.getDate()+"日 "
         +time.getHours()+":"+time.getMinutes()+":"+time.getSeconds()+" "+time.getMilliseconds()
         +"毫秒";
     }
+
+    //数据绑定
+    var dataBind = new Vue({
+        el:"#DataBind",
+        data:{
+            msg:"This is the message"
+        },
+        methods:{
+            changeMsg:function(){
+                this.msg = "The message is changed!";
+            }
+        }
+    });
+
+
 </script>
 </html>
