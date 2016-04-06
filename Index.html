@@ -69,6 +69,16 @@
         font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
         font-size: 14px;
     }
+        .class-a{
+            height:100px;
+            width:200px;
+        }
+        .class-b{
+            background-color:#249BF6;
+        }
+        .class-c{
+            border:1px solid #272822;
+        }
 
     </style>
 </head>
@@ -76,6 +86,7 @@
 <a name="Dictionary"></a>
 </br>
 <h1>我的Vue学习Demo</h1>
+<h2><a href="http://cn.vuejs.org/guide/">参考教程</a></h2>
 <h2>目录</h2>
 <ul>
     <li><a href="#FirstDemo">Hello World!</a></li>
@@ -89,6 +100,8 @@
     <li><a href="#DataFilter">过滤器、指令、缩写</a></li>
     <li><a href="#Computed">计算属性</a></li>
     <li><a href="#ClassStyle">Class与Style绑定</a></li>
+    <li><a href="#ConditionRender">条件渲染</a></li>
+    <li><a href="#ListRender">列表渲染</a></li>
 </ul>
 <h2>Demo</h2>
 
@@ -116,8 +129,8 @@
             </li>
         </ul>
     </div>
-    <p class="red">注：这里的list必须是数组对象！</p>
-    <p class="red">另：其中一个指令解析出错，所有指令都不执行！</p>
+    <p class="tip">注：这里的list可以是数组也可以是对象！</p>
+    <p class="tip">另：其中一个指令解析出错，所有指令都不执行！</p>
 </div>
 <!-- 渲染列表 ---结束-->
 </br>
@@ -609,7 +622,10 @@ data: {
 }
             </code>
         </pre>
+        <div v-bind:class="classObject"></div>
+        <p class="tip">注意：classObject中的属性名称必须使用字符串，不能使用对象名</p>
         <p>我们也可以在这里绑定一个返回对象的计算属性。这是一个常用且强大的模式。</p>
+
         <h5>#数组语法</h5>
         <p>也可以把一个数组传给<span class="highlighting">v-bind:class</span>,以应用一个class列表</p>
         <pre>
@@ -678,6 +694,7 @@ data: {
             </script>
             </code>
         </pre>
+        <div v-bind:style="styleObject"></div>
         <pre>
             <code class="language-javascript">
 data: {
@@ -706,6 +723,97 @@ data: {
 <span><a href="#Dictionary">回目录</a></span>
 </br>
 
+<!-- 条件渲染 ---开始-->
+<a name="ConditionRender"></a>
+<h3 class="title">#条件渲染</h3>
+<div class="demo">
+    <div id="ConditionRender">
+       <h4>v-if</h4>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<h5 v-if="ok">Yes</h5>
+<h5 v-else>No</h5>
+                </script>
+            </code>
+        </pre>
+        <h5 v-if="ok">Yes</h5>
+        <h5 v-else>No</h5>
+       <h4>template v-if</h4>
+       <p>因为 v-if 是一个指令，需要将它添加到一个元素上。但是如果我们想切换多个元素呢？此时我们可以把一个 &lt;template&gt; 元素当做包装元素，并在上面使用 v-if，最终的渲染结果不会包含它。</p>
+       <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<template v-if="ok">
+  <h1>Title</h1>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</template>
+                </script>
+            </code>
+        </pre>
+        <template v-if="ok">
+  <h5>Title</h5>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</template>
+       <h4>v-show</h4>
+       <p>另一个根据条件展示元素的选项是<span class="highlighting">v-show</span>指令。用法大体上一样：</p>
+          <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<h1 v-show="ok">Hello!</h1>
+                </script>
+            </code>
+        </pre>    
+        <p>不同的是有 <span class="highlighting">v-if</span>的元素会始终渲染并保持在 DOM 中。<span class="highlighting">v-show</span>是简单的切换元素的 CSS 属性 <span class="highlighting">display</span></p>
+        <p class="tip">注意 <span class="highlighting">v-show</span> 不支持 &lt;template&gt; 语法。</p>
+        <h5 v-show="ok">Hello!</h5>
+       <h4>v-else</h4>
+       <p>可以用 <span class="highlighting">v-else</span> 指令给 <span class="highlighting">v-if </span>或 <span class="highlighting">v-show</span> 添加一个 “else 块”：</p>
+highlighting">v-show</span>指令。用法大体上一样：</p>
+          <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<div v-if="Math.random() > 0.5">
+  Sorry
+</div>
+<div v-else>
+  Not sorry
+</div>
+                </script>
+            </code>
+        </pre>    
+<div v-if="Math.random() > 0.5">
+  Sorry
+</div>
+<div v-else>
+  Not sorry
+</div>
+<p class="tip">注意：<span class="highlighting">v-else</span>元素必须立即跟在<span class="highlighting">v-if</span>或<span class="highlighting">v-show</span>元素的后面__否则它不能被识别。</p>
+       <h4>v-if vs. v-show</h4> 
+       <p>在切换<span class="highlighting"> v-if </span>块时，Vue.js 有一个局部编译/卸载过程，因为 v-if 之中的模板也可能包括数据绑定或子组件。<span class="highlighting">v-if</span> 是真实的条件渲染，因为它会确保条件块在切换当中合适地销毁与重建条件块内的事件监听器和子组件。</p>
+       <p><span class="highlighting">v-if</span> 也是惰性的：如果在初始渲染时条件为假，则什么也不做——在条件第一次变为真时才开始局部编译（编译会被缓存起来）。</p>
+       <p>相比之下，<span class="highlighting">v-show</span> 简单得多——元素始终被编译并保留，只是简单地基于 CSS 切换。</p>
+       <p>一般来说，<span class="highlighting">v-if</span> 有更高的切换消耗而 v-show 有更高的初始渲染消耗。因此，如果需要频繁切换 <span class="highlighting">v-show</span> 较好，如果在运行时条件不大可能改变 <span class="highlighting">v-if</span> 较好。</p>
+    </div>
+</div>
+<!-- 条件渲染 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
+
+<!-- 列表渲染 ---开始-->
+<a name="ListRender"></a>
+<h3 class="title">#列表渲染</h3>
+<div class="demo">
+
+    </div>
+</div>
+<!-- 列表渲染 ---结束-->
+</br>
+<span><a href="#Dictionary">回目录</a></span>
+
+
 </body>
 <script type="text/javascript" src="prism.js"></script>
 <script type="text/javascript" src="vue.js"></script>
@@ -722,12 +830,12 @@ data: {
     var theFor = new Vue({
         el: "#For",
         data: {
-            list: [
-                "First",
-                "Second",
-                "Third",
-                "Fourth"
-            ]
+            list: {
+                First:"First",
+                Second:"Second",
+                Third:"Third",
+                Fourth:"Fourth"
+            }
         }
     });
 
@@ -872,7 +980,32 @@ data: {
  //   computed.$watch('lastName', function (val) {
 //    this.fullName = this.firstName + ' ' + val
 //  })
-    
 
+
+//  Class与Style绑定
+    var classOjbect = new Vue({
+        el:"#ClassStyle",
+        data:{
+            classObject:{
+                "class-a":true,
+                "class-b":true,
+                "class-c":true
+            },
+            styleObject:{
+                height:'100px',
+                width:'200px',
+                backgroundColor:'#249BF6',
+                border:'1px solid #272822'
+            }
+        }
+    });
+
+// 条件渲染
+    var conditionRender = new Vue({
+        el:"#ConditionRender",
+        data:{
+            ok:true
+        }
+    });
 </script>
 </html>

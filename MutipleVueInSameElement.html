@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>多个Vm挂在同一个元素上</title>
+    <link rel="stylesheet" href="prism.css"/>
+    <style type="text/css">
+        div,p,span{
+            font-size:11px;
+        }
+        li{
+            line-height: 25px;
+        }
+        .demo {
+            border: 1px solid #d6dde3;
+            background: #ede9ed;
+            min-height: 100px;
+            width: 600px;
+            margin: 10px 0 0 20px;
+            padding: 10px 10px 10px 20px;
+            line-height: 30px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .highlighting{
+            color: #ffb02a;
+            background: #e3e7d5;
+            font-family: Verdana;
+            padding: 2px;
+        }
+
+        pre code {
+            margin:0;
+            padding:0;
+        }
+
+       .demo p.tip {
+        padding: 12px 24px 12px 30px;
+        margin: 2em 0;
+        border-left: 4px solid #f66;
+        background-color: #f8f8f8;
+        position: relative;
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 2px;
+    } 
+
+        .demo p.tip:before {
+        position: absolute;
+        top: 14px;
+        left: -12px;
+        background-color: #f66;
+        color: #fff;
+        content: "!";
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+        font-weight: bold;
+        font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14px;
+    }
+        .class-a{
+            height:100px;
+            width:200px;
+        }
+        .class-b{
+            background-color:#272822;
+        }
+        .class-c{
+            border:1px solid #E2F4F0;
+        }
+
+    </style>
+</head>
+<body>
+<a name="Dictionary"></a>
+</br>
+<h1>多个Vm挂在同一个元素上</h1>
+
+<div class="demo">
+    <div id="MutipleDemo">
+        <input v-model="Message" type="text"/></br>
+        <p>{{Message}}</p>
+        <p>{{FirstMessage}}</p>
+        <p id="SubEl">{{SecondMessage}}</p>
+    </div>
+    <p class="tip">
+        注意:如果有多个VM挂载在同一个元素上时，Vue只会加载最先执行的VM.
+    </p>
+</div>
+
+
+</body>
+<script type="text/javascript" src="prism.js"></script>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+    var firstVm = new Vue({
+        el:"#MutipleDemo",
+       data:{
+            Message:"First Message",
+           FirstMessage:"First Message"
+       }
+    });  
+    var secondMessage = new Vue({
+        el:"#SubEl",
+        data:{
+            SecondMessage:"Second Message"
+        }
+    });  
+
+    var reg = /\b([\w-\.]+)(?=\.git)/;
+    
+
+</script>
+</html>
