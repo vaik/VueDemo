@@ -806,7 +806,116 @@ highlighting">v-show</span>指令。用法大体上一样：</p>
 <a name="ListRender"></a>
 <h3 class="title">#列表渲染</h3>
 <div class="demo">
+    <div id="ListRender">
+    <h4>v-for</h4>
+    <h5>示例</h5>
+  <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<ul id="example-1">
+  <li v-for="item in items">
+    {{ item.message }}
+  </li>
+</ul>
+                </script>
+            </code>
+        </pre>  
+        <pre>
+            <code class="language-javascript">
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+            </code>
+        </pre>   
+        <h5>结果:</h5>  
+        <ul id="example-1" class="">
+          <li v-for="item in items">
+            {{ item.message }}
+          </li>
+        </ul>
+        <p>使用$index</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<ul id="example-2">
+  <li v-for="item in items">
+    {{ parentMessage }} - {{ $index }} - {{ item.message }}
+  </li>
+</ul>
+                </script>
+            </code>
+        </pre>  
+        <pre>
+            <code class="language-javascript">
+var example2 = new Vue({
+  el: '#example-2',
+  data: {
+    parentMessage: 'Parent',
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+            </code>
+        </pre>   
+        <h5>结果:</h5>  
+<ul id="example-2">
+  <li v-for="item in items">
+    {{ parentMessage }} - {{ $index }} - {{ item.message }}
+  </li>
+</ul>
+<p>另外，你可以为索引指定一个别名（如果 <span class="highlighting">v-for</span> 用于一个对象，则可以为对象的键指定一个别名）：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<div v-for="(index,item) in items">
+    {{ index }} {{ item.message }}
+</div>
+                </script>
+            </code>
+        </pre>  
+<p>从 1.0.17 开始可以使用 <span class="highlighting">of</span> 分隔符，更接近 JavaScript 遍历器语法：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<div v-for="item of items"></div>
+                </script>
+            </code>
+        </pre>
+            <h4>template-for</h4>
+            <p>类似于 template <span class="highlighting">v-if</span>，也可以将 <span class="highlighting">v-for</span> 用在 &lt;template&gt;标签上，以渲染一个包含多个元素的块。例如：</p>
+        <pre>
+            <code class="language-markup">
+                <script type="prism-html-markup">
+<ul>
+    <template v-for="item in items">
+        <li>{{item.msg}}</li>
+        <li class="divider"></li>
+    </template>
+</ul> 
+            </script>
+            </code>
+        </pre>
 
+        <h4>数组变化检测</h4>
+        <h5>#变异方法</h5>
+        <p>Vue.js包装了被观察数组的变异方法，故它们能触发视图更新。被包装的方法有</p>
+        <ul>
+            <li ><span class="highlighting">push()</span></li>
+            <li ><span class="highlighting">pop()</span></li>
+            <li ><span class="highlighting">shift()</span></li>
+            <li ><span class="highlighting">unshift()</span></li>
+            <li ><span class="highlighting">splice()</span></li>
+            <li ><span class="highlighting">sort()</span></li>
+            <li ><span class="highlighting">reverse()</span></li>
+        </ul>
     </div>
 </div>
 <!-- 列表渲染 ---结束-->
@@ -1007,5 +1116,27 @@ highlighting">v-show</span>指令。用法大体上一样：</p>
             ok:true
         }
     });
+
+    // 列表渲染
+            var example1 = new Vue({
+            el: '#example-1',
+              data: {
+                items: [
+                  { message: 'Foo' },
+                  { message: 'Bar' }
+                ]
+              }
+        });
+
+            var example2 = new Vue({
+            el: '#example-2',
+              data: {
+                parentMessage: 'Parent',
+                items: [
+                  { message: 'Foo' },
+                  { message: 'Bar' }
+                ]
+              }
+        });
 </script>
 </html>
